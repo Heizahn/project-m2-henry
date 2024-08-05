@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Añadir Película</title>
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body data-bs-theme="dark">
+        <header class="sticky-top">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand titleShadow fs-1 fw-bold" href="/">
+                        Cinema King
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                        class="collapse navbar-collapse"
+                        id="navbarNavAltMarkup"
+                    >
+                        <div class="navbar-nav">
+                            <a class="nav-link" href="/">Inicio</a>
+                            <a class="nav-link" href="./about.html">Sobre Mi</a>
+                            <a
+                                class="nav-link"
+                                aria-current="page"
+                                href="./addmovie.html"
+                            >
+                                Añadir Película
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h2 class="titlePages">Añadir Película!</h2>
+            <section class="container">
+                <form class="row g-3" id="formMovie">
+                    <div class="col-md-6">
+                        <label for="title" class="form-label">Titulo</label>
+                        <input type="text" class="form-control" id="title" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="year" class="form-label">Año</label>
+                        <input type="number" class="form-control" id="year" min="1895" max="2024"/>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="director" class="form-label">
+                            Director
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="director"
+                            placeholder="George Lucas"
+                        />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="duration" class="form-label">
+                            Duración
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="duration"
+                            placeholder="2h 14min"
+                        />
+                    </div>
+                    <div class="col-md-9">
+                        <label for="genre" class="form-label">Géneros</label>
+                        <input type="text" class="form-control" id="genre" />
+                    </div>
+                    <div class="col-md-3">
+                        <label for="rate" class="form-label">
+                            Calificación
+                        </label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="rate"
+                            placeholder="0.0"
+                            step="0.1"
+							min="0.0"
+							max="10.0"
+                        />
+                    </div>
+                    <div class="col-12">
+                        <label for="poster" class="form-label">Poster</label>
+                        <input type="url" class="form-control" id="poster" />
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-secundary" id="btnCancel">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+
+		<script src="../dist/addMovie.bundle.js"></script>
+    </body>
+</html>
